@@ -1,10 +1,9 @@
 from rest_framework.serializers import ModelSerializer
-from .models import post
-
+from .models import Post
 
 class postSerializer(ModelSerializer):
     class Meta:
-        model=post
+        model=Post
         fields = [
             'title',
             'description',

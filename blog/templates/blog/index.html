@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+{% if posts %}
+      <ul>
+      <h3>Here are all your posts:</h3>
+          {% for x in posts %}
+           <li><a href="{{ x.id }}">{{ x.title }}</a></li>
+          {% endfor %}
+      </ul>
+{% else %}
+<h3>you dont have any posts</h3>
+{% endif %}
+{% endblock %}
